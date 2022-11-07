@@ -39,27 +39,42 @@ const Navbar = ({ menuOpen, handleClick, closeSidebar }) => {
           <ol className="flex font-mono text-zinc-300 text-sm marker:text-green [counter-reset:list-number]">
             <li
               className="text-lightestSlate 
-                before:mr-3 
-                before:text-green
-                before:content-['0'counter(list-number)'.'] [counter-increment:list-number]  transition-all ease-linear"
+                [counter-increment:list-number]"
             >
-              <a href="#about">about</a>
+              <a
+                href="#about"
+                className="before:mr-3 
+                before:text-green
+                before:content-['0'counter(list-number)'.']"
+              >
+                about
+              </a>
             </li>
             <li
               className="text-lightestSlate 
-                before:mr-3 
-                before:text-green
-                before:content-['0'counter(list-number)'.'] [counter-increment:list-number]  transition-all ease-linear"
+                [counter-increment:list-number]"
             >
-              <a href="#projects">projects</a>
+              <a
+                href="#projects"
+                className="before:mr-3 
+                before:text-green
+                before:content-['0'counter(list-number)'.']"
+              >
+                projects
+              </a>
             </li>
             <li
               className="text-lightestSlate 
-                before:mr-3 
-                before:text-green
-                before:content-['0'counter(list-number)'.'] [counter-increment:list-number]  transition-all ease-linear"
+                [counter-increment:list-number]"
             >
-              <a href="#contact">contact</a>
+              <a
+                href="#contact"
+                className="before:mr-3 
+                before:text-green
+                before:content-['0'counter(list-number)'.']"
+              >
+                contact
+              </a>
             </li>
           </ol>
           <a href="/resume.pdf" target="_blank" rel="noreferrer">
@@ -111,39 +126,49 @@ const Navbar = ({ menuOpen, handleClick, closeSidebar }) => {
           <nav className="flex flex-col justify-between items-center w-full">
             <ol className="font-mono text-zinc-300 text-sm marker:text-green [counter-reset:list-number] [font-size:clamp(0.8rem,4.25vw,1.5rem)] text-center">
               <li
-                className="text-lightestSlate pt-3 pb-10 
-                before:mb-3 
+                className="text-lightestSlate 
+                [counter-increment:list-number]"
+              >
+                <a
+                  href="#about"
+                  className="block pt-3 pb-10  before:mb-3 
                 before:block
                 before:text-green
-                before:content-['0'counter(list-number)'.'] [counter-increment:list-number]  transition-all ease-linear
-              "
-                onClick={closeSidebar}
-              >
-                <a href="#about">about</a>
+                before:content-['0'counter(list-number)'.']"
+                  onClick={closeSidebar}
+                >
+                  about
+                </a>
               </li>
               <li
-                className="text-lightestSlate pt-3 pb-10 
-                before:mb-3 
+                className="text-lightestSlate 
+                [counter-increment:list-number]"
+              >
+                <a
+                  href="#projects"
+                  className="block pt-3 pb-10  before:mb-3 
                 before:block
                 before:text-green
-                before:content-['0'counter(list-number)'.'] [counter-increment:list-number]  transition-all ease-linear
-              "
-                onClick={closeSidebar}
-              >
-                <a href="#projects" className="w-full h-full block">
+                before:content-['0'counter(list-number)'.']"
+                  onClick={closeSidebar}
+                >
                   projects
                 </a>
               </li>
               <li
-                className="text-lightestSlate pt-3 pb-10 
-                before:mb-3 
+                className="text-lightestSlate 
+                [counter-increment:list-number]"
+              >
+                <a
+                  href="#contact"
+                  className="block pt-3 pb-10  before:mb-3 
                 before:block
                 before:text-green
-                before:content-['0'counter(list-number)'.'] [counter-increment:list-number]  transition-all ease-linear
-              "
-                onClick={closeSidebar}
-              >
-                <a href="#contact">contact</a>
+                before:content-['0'counter(list-number)'.']"
+                  onClick={closeSidebar}
+                >
+                  contact
+                </a>
               </li>
             </ol>
             <a href="/resume.pdf" target="_blank" rel="noreferrer">
