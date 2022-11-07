@@ -9,10 +9,6 @@
     @apply m-0;
   }
 
-  html {
-    scroll-behavior: smooth;
-  }
-
   body {
     @apply bg-navy text-slate;
   }

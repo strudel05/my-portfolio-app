@@ -19,16 +19,26 @@ function App() {
     }
   };
 
+  const closeSidebar = () => {
+    console.log("test");
+    document.body.classList.remove("fixed-body");
+    setMenuOpen(false);
+  };
+
   return (
     <>
       <Logo />
-      <Navbar menuOpen={menuOpen} handleClick={handleClick} />
+      <Navbar
+        menuOpen={menuOpen}
+        handleClick={handleClick}
+        closeSidebar={closeSidebar}
+      />
       <DecorativeLinks />
       <main
         className={
           menuOpen
-            ? "blur-[8px] px-6 m-auto sm:px-12 md:px-24 lg:px-36 transition-all duration-500 ease-in-out"
-            : "px-6 m-auto sm:px-12 md:px-24 lg:px-36 transition-all duration-500 ease-in-out"
+            ? "blur-[8px] px-6  sm:px-12 md:px-24 lg:px-36 transition-all duration-500 ease-in-out"
+            : "px-6 sm:px-12 md:px-24 lg:px-36 transition-all duration-500 ease-in-out"
         }
       >
         <Hero />

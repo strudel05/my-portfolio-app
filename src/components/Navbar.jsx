@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const Navbar = ({ menuOpen, handleClick }) => {
+const Navbar = ({ menuOpen, handleClick, closeSidebar }) => {
   const [scrollAtTop, setScrollAtTop] = useState(true);
   const [scrollDirection, setScrollDirection] = useState("");
 
@@ -41,7 +41,7 @@ const Navbar = ({ menuOpen, handleClick }) => {
               className="text-lightestSlate 
                 before:mr-3 
                 before:text-green
-                before:content-['0'counter(list-number)'.'] [counter-increment:list-number]  transition-all ease-linear hover:text-green cursor-pointer"
+                before:content-['0'counter(list-number)'.'] [counter-increment:list-number]  transition-all ease-linear"
             >
               <a href="#about">about</a>
             </li>
@@ -49,7 +49,7 @@ const Navbar = ({ menuOpen, handleClick }) => {
               className="text-lightestSlate 
                 before:mr-3 
                 before:text-green
-                before:content-['0'counter(list-number)'.'] [counter-increment:list-number]  transition-all ease-linear hover:text-green cursor-pointer"
+                before:content-['0'counter(list-number)'.'] [counter-increment:list-number]  transition-all ease-linear"
             >
               <a href="#projects">projects</a>
             </li>
@@ -57,7 +57,7 @@ const Navbar = ({ menuOpen, handleClick }) => {
               className="text-lightestSlate 
                 before:mr-3 
                 before:text-green
-                before:content-['0'counter(list-number)'.'] [counter-increment:list-number]  transition-all ease-linear hover:text-green cursor-pointer"
+                before:content-['0'counter(list-number)'.'] [counter-increment:list-number]  transition-all ease-linear"
             >
               <a href="#contact">contact</a>
             </li>
@@ -104,8 +104,8 @@ const Navbar = ({ menuOpen, handleClick }) => {
         <aside
           className={
             menuOpen
-              ? "sidemenu md:hidden z-10 flex justify-center items-center fixed top-0 bottom-0 right-0 bg-lightNavy [width:min(75vw,400px)] transition-all duration-500 ease-linear translate-x-[0vw] h-screen"
-              : "sidemenu md:hidden z-10 flex justify-center items-center fixed top-0 bottom-0 right-0 bg-lightNavy [width:min(75vw,400px)] transition-all duration-500 ease-linear translate-x-[100vw] h-screen"
+              ? "md:hidden z-10 flex justify-center items-center fixed top-0 bottom-0 right-0 bg-lightNavy [width:min(75vw,400px)] transition-all duration-150 ease-linear translate-x-[0vw] min-h-screen"
+              : "md:hidden z-10 flex justify-center items-center absolute top-0 bottom-0 right-0 bg-lightNavy [width:min(75vw,400px)] transition-all duration-150 ease-linear translate-x-[100vw] min-h-screen"
           }
         >
           <nav className="flex flex-col justify-between items-center w-full">
@@ -115,30 +115,35 @@ const Navbar = ({ menuOpen, handleClick }) => {
                 before:mb-3 
                 before:block
                 before:text-green
-                before:content-['0'counter(list-number)'.'] [counter-increment:list-number]  transition-all ease-linear hover:text-green cursor-pointer
+                before:content-['0'counter(list-number)'.'] [counter-increment:list-number]  transition-all ease-linear
               "
+                onClick={closeSidebar}
               >
-                about
+                <a href="#about">about</a>
               </li>
               <li
                 className="text-lightestSlate pt-3 pb-10 
                 before:mb-3 
                 before:block
                 before:text-green
-                before:content-['0'counter(list-number)'.'] [counter-increment:list-number]  transition-all ease-linear hover:text-green cursor-pointer
+                before:content-['0'counter(list-number)'.'] [counter-increment:list-number]  transition-all ease-linear
               "
+                onClick={closeSidebar}
               >
-                projects
+                <a href="#projects" className="w-full h-full block">
+                  projects
+                </a>
               </li>
               <li
                 className="text-lightestSlate pt-3 pb-10 
                 before:mb-3 
                 before:block
                 before:text-green
-                before:content-['0'counter(list-number)'.'] [counter-increment:list-number]  transition-all ease-linear hover:text-green cursor-pointer
+                before:content-['0'counter(list-number)'.'] [counter-increment:list-number]  transition-all ease-linear
               "
+                onClick={closeSidebar}
               >
-                contact
+                <a href="#contact">contact</a>
               </li>
             </ol>
             <a href="/resume.pdf" target="_blank" rel="noreferrer">
