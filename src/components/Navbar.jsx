@@ -34,43 +34,43 @@ const Navbar = ({ menuOpen, handleClick, closeSidebar }) => {
   return (
     <header className={scrollAtTop ? "header" : `header ${scrollDirection}`}>
       <nav className="flex items-center justify-between w-full">
-        <h1 className="font-mono text-3xl font-bold text-green">LOGO.</h1>
+        <h1 className="font-mono text-3xl font-bold text-skin-accent">LOGO.</h1>
         <div className="hidden md:flex items-center">
-          <ol className="flex font-mono text-zinc-300 text-sm marker:text-green [counter-reset:list-number]">
+          <ol className="flex font-mono text-zinc-300 text-sm marker:text-skin-accent [counter-reset:list-number]">
             <li
-              className="text-lightestSlate 
+              className="text-skin-base 
                 [counter-increment:list-number]"
             >
               <a
                 href="#about"
                 className="before:mr-3 
-                before:text-green
+                before:text-skin-accent
                 before:content-['0'counter(list-number)'.']"
               >
                 about
               </a>
             </li>
             <li
-              className="text-lightestSlate 
+              className="text-skin-base 
                 [counter-increment:list-number]"
             >
               <a
                 href="#projects"
                 className="before:mr-3 
-                before:text-green
+                before:text-skin-accent
                 before:content-['0'counter(list-number)'.']"
               >
                 projects
               </a>
             </li>
             <li
-              className="text-lightestSlate 
+              className="text-skin-base 
                 [counter-increment:list-number]"
             >
               <a
                 href="#contact"
                 className="before:mr-3 
-                before:text-green
+                before:text-skin-accent
                 before:content-['0'counter(list-number)'.']"
               >
                 contact
@@ -84,18 +84,18 @@ const Navbar = ({ menuOpen, handleClick, closeSidebar }) => {
         <div
           className={
             menuOpen
-              ? "md:hidden z-20 text-lightestSlate relative w-9 h-9 cursor-pointer transition-all ease-in-out flex items-center justify-center hamburger-toggle"
-              : "md:hidden z-20 text-lightestSlate relative w-9 h-9 cursor-pointer transition-all ease-in-out flex items-center justify-center"
+              ? "md:hidden z-20 text-skin-base relative w-9 h-9 cursor-pointer transition-all ease-in-out flex items-center justify-center hamburger-toggle"
+              : "md:hidden z-20 text-skin-base relative w-9 h-9 cursor-pointer transition-all ease-in-out flex items-center justify-center"
           }
           onClick={handleClick}
         >
           <div
             className="
-            bg-green w-8 h-1 rounded absolute
+            bg-skin-accent w-8 h-1 rounded absolute
             transition-all duration-500 
 
             before:content-[''] 
-          before:bg-green 
+          before:bg-skin-accent 
             before:w-8 
             before:h-1 
             before:rounded 
@@ -105,7 +105,7 @@ const Navbar = ({ menuOpen, handleClick, closeSidebar }) => {
             before:duration-500
 
             after:content-[''] 
-          after:bg-green 
+          after:bg-skin-accent 
             after:w-8 
             after:h-1 
             after:rounded 
@@ -119,21 +119,21 @@ const Navbar = ({ menuOpen, handleClick, closeSidebar }) => {
         <aside
           className={
             menuOpen
-              ? "md:hidden z-10 flex justify-center items-center fixed top-0 bottom-0 right-0 bg-lightNavy [width:min(75vw,400px)] transition-all duration-150 ease-linear translate-x-[0vw] min-h-screen"
-              : "md:hidden z-10 flex justify-center items-center absolute top-0 bottom-0 right-0 bg-lightNavy [width:min(75vw,400px)] transition-all duration-150 ease-linear translate-x-[100vw] min-h-screen"
+              ? "md:hidden z-10 flex justify-center items-center fixed top-0 bottom-0 right-0 bg-skin-muted [width:min(75vw,400px)] transition-all duration-150 ease-linear translate-x-[0vw] min-h-screen"
+              : "md:hidden z-10 flex justify-center items-center absolute top-0 bottom-0 right-0 bg-skin-muted [width:min(75vw,400px)] transition-all duration-150 ease-linear translate-x-[100vw] min-h-screen"
           }
         >
           <nav className="flex flex-col justify-between items-center w-full">
-            <ol className="font-mono text-zinc-300 text-sm marker:text-green [counter-reset:list-number] [font-size:clamp(1rem,4.25vw,1.5rem)] text-center">
+            <ol className="font-mono text-zinc-300 text-sm marker:text-skin-accent [counter-reset:list-number] [font-size:clamp(1rem,4.25vw,1.5rem)] text-center">
               <li
-                className="text-lightestSlate 
+                className="text-skin-base 
                 [counter-increment:list-number]"
               >
                 <a
                   href="#about"
                   className="block pt-3 pb-10  before:mb-3 
                 before:block
-                before:text-green
+                before:text-skin-accent
                 before:content-['0'counter(list-number)'.']"
                   onClick={closeSidebar}
                 >
@@ -141,14 +141,14 @@ const Navbar = ({ menuOpen, handleClick, closeSidebar }) => {
                 </a>
               </li>
               <li
-                className="text-lightestSlate 
+                className="text-skin-base 
                 [counter-increment:list-number]"
               >
                 <a
                   href="#projects"
                   className="block pt-3 pb-10  before:mb-3 
                 before:block
-                before:text-green
+                before:text-skin-accent
                 before:content-['0'counter(list-number)'.']"
                   onClick={closeSidebar}
                 >
@@ -156,14 +156,14 @@ const Navbar = ({ menuOpen, handleClick, closeSidebar }) => {
                 </a>
               </li>
               <li
-                className="text-lightestSlate 
+                className="text-skin-base 
                 [counter-increment:list-number]"
               >
                 <a
                   href="#contact"
                   className="block pt-3 pb-10  before:mb-3 
                 before:block
-                before:text-green
+                before:text-skin-accent
                 before:content-['0'counter(list-number)'.']"
                   onClick={closeSidebar}
                 >

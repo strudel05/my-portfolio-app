@@ -1,10 +1,10 @@
 const Contact = () => {
   return (
     <section id="contact" className="flex flex-col justify-center items-center">
-      <h2 className="font-mono [font-size:clamp(1.25rem,4.5vw,1.75rem)] font-medium text-green whitespace-nowrap mb-5">
+      <h2 className="font-mono [font-size:clamp(1.25rem,4.5vw,1.75rem)] font-medium text-skin-accent whitespace-nowrap mb-5">
         03. What's Next?
       </h2>
-      <h3 className="[font-size:clamp(2.5rem,7vw,4rem)] text-lightestSlate mb-8 xl:mb-10">
+      <h3 className="[font-size:clamp(2.5rem,7vw,4rem)] text-skin-base mb-8 xl:mb-10">
         Get In Touch
       </h3>
       <p className="max-w-[600px] mb-8 xl:mb-10 text-center">

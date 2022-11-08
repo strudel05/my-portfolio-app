@@ -9,7 +9,7 @@ const DecorativeLinks = () => {
       
         after:content-[''] 
         after:w-[1px]
-        after:h-20 after:bg-lightSlate
+        after:h-20 after:bg-lightestSlate
         after:mt-4"
         >
           <li className="m-0">
@@ -19,7 +19,7 @@ const DecorativeLinks = () => {
               rel="noreferrer"
               aria-label="GitHub"
               className="
-            hover:text-green
+            hover:text-skin-accent
             hover:-translate-y-1
             transition-all
             block
@@ -36,7 +36,7 @@ const DecorativeLinks = () => {
               rel="noreferrer"
               aria-label="Instagram"
               className="
-             hover:text-green
+             hover:text-skin-accent
             hover:-translate-y-1
             transition-all
             block
@@ -53,7 +53,7 @@ const DecorativeLinks = () => {
               rel="noreferrer"
               aria-label="LinkedIn"
               className="
-             hover:text-green
+             hover:text-skin-accent
             hover:-translate-y-1
             transition-all
             block
@@ -71,7 +71,7 @@ const DecorativeLinks = () => {
               after:content-[''] 
               after:w-[1px]
               after:h-20 
-              after:bg-lightSlate
+              after:bg-lightestSlate
               after:block
               after:mt-4"
         >
@@ -81,7 +81,7 @@ const DecorativeLinks = () => {
             [writing-mode:vertical-rl] 
 
             hover:-translate-y-1
-            hover:text-green
+            hover:text-skin-accent
               "
             href="mailto:euyjang05@gmail.com"
           >

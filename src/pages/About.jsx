@@ -36,20 +36,20 @@ const About = () => {
         <div className="col-span-2 max-w-[200px] md:max-w-[300px] mt-4 mb-16 md:mt-0 mx-auto w-[80%] sm:w-[60%] md:w-full order-1 md:order-2 ">
           <div
             className="
-          rounded w-full text-center relative bg-green
+          rounded w-full text-center relative bg-skin-accent
 
           before:w-full
           before:h-full
           before:content-['']
           before:absolute
-          before:bg-navy
+          before:bg-skin-base
           before:mix-blend-screen
           before:left-0
           before:rounded
           before:block
 
           after:border-2
-          after:border-green
+          after:border-skin-accent
           after:-z-10
           after:absolute
           after:block

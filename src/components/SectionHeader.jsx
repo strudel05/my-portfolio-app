@@ -2,12 +2,12 @@ const SectionHeader = ({ sectionId, sectionTitle }) => {
   return (
     <h2
       data-section-id={sectionId}
-      className="[font-size:clamp(1.625rem,4.875vw,2rem)] font-medium capitalize text-lightestSlate flex items-center whitespace-nowrap mt-3 mb-10 xl:mb-20
+      className="[font-size:clamp(1.625rem,4.875vw,2rem)] font-medium capitalize text-skin-base flex items-center whitespace-nowrap mt-3 mb-10 xl:mb-20
           
         
           before:content-['0'attr(data-section-id)'.']
           before:font-mono
-          before:text-green
+          before:text-skin-accent
           before:mr-3
           before:[font-size:clamp(1rem,3vw,1.25rem)]
           before:self-end
@@ -16,7 +16,7 @@ const SectionHeader = ({ sectionId, sectionTitle }) => {
 
           after:content-['']
           after:h-[1px]
-          after:bg-lightestNavy
+          after:bg-skin-moremuted
           after:w-full
           after:ml-6
           after:sm:w-[200px]
