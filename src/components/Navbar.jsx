@@ -78,7 +78,7 @@ const Navbar = ({ menuOpen, handleClick, closeSidebar }) => {
             </li>
           </ol>
           <a href="/resume.pdf" target="_blank" rel="noreferrer">
-            <button className="ml-4">resume</button>
+            <button className="ml-4">my resume</button>
           </a>
         </div>
         <div
@@ -124,7 +124,7 @@ const Navbar = ({ menuOpen, handleClick, closeSidebar }) => {
           }
         >
           <nav className="flex flex-col justify-between items-center w-full">
-            <ol className="font-mono text-zinc-300 text-sm marker:text-green [counter-reset:list-number] [font-size:clamp(0.8rem,4.25vw,1.5rem)] text-center">
+            <ol className="font-mono text-zinc-300 text-sm marker:text-green [counter-reset:list-number] [font-size:clamp(1rem,4.25vw,1.5rem)] text-center">
               <li
                 className="text-lightestSlate 
                 [counter-increment:list-number]"
@@ -172,8 +172,8 @@ const Navbar = ({ menuOpen, handleClick, closeSidebar }) => {
               </li>
             </ol>
             <a href="/resume.pdf" target="_blank" rel="noreferrer">
-              <button className="mt-5 px-10 py-5 [font-size:clamp(0.75rem,4vw,1.25rem)]">
-                resume
+              <button className="mt-5 px-10 py-5 [font-size:clamp(1rem,4vw,1.25rem)]">
+                my resume
               </button>
             </a>
           </nav>

@@ -37,7 +37,7 @@ function App() {
       <main
         className={
           menuOpen
-            ? "blur-[8px] px-6  sm:px-12 md:px-24 lg:px-36 transition-all duration-500 ease-in-out"
+            ? "blur-[8px] md:blur-none px-6  sm:px-12 md:px-24 lg:px-36 transition-all duration-500 ease-in-out"
             : "px-6 sm:px-12 md:px-24 lg:px-36 transition-all duration-500 ease-in-out"
         }
       >

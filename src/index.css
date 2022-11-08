@@ -5,6 +5,10 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --navy: #1d2228;
+  }
+
   * {
     @apply m-0;
   }
@@ -195,6 +199,9 @@
 }
 
 @media (min-width: 768px) {
+  .fixed-body {
+    overflow: auto;
+  }
   .header {
     padding: 0 2.5rem;
   }
