@@ -34,7 +34,7 @@ const ProjectCard = ({
             return (
               <li
                 key={i}
-                className="mx-0 px-1 py-[2px] opacity-[0.85] bg-skin-alwaysdark rounded"
+                className="mx-0 px-1 py-[2px] opacity-[0.85] bg-skin-alwaysdark text-skin-white rounded"
               >
                 {tech}
               </li>

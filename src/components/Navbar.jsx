@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
 
-const Navbar = ({ menuOpen, handleClick, closeSidebar }) => {
+const Navbar = ({
+  menuOpen,
+  handleClick,
+  closeSidebar,
+  theme,
+  handleTheme,
+}) => {
   const [scrollAtTop, setScrollAtTop] = useState(true);
   const [scrollDirection, setScrollDirection] = useState("");
 
@@ -80,6 +86,9 @@ const Navbar = ({ menuOpen, handleClick, closeSidebar }) => {
           <a href="/resume.pdf" target="_blank" rel="noreferrer">
             <button className="ml-4">my resume</button>
           </a>
+          <button className="ml-4" onClick={handleTheme}>
+            {theme}
+          </button>
         </div>
         <div
           className={

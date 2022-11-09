@@ -9,7 +9,7 @@ const DecorativeLinks = () => {
       
         after:content-[''] 
         after:w-[1px]
-        after:h-20 after:bg-lightestSlate
+        after:h-20 after:bg-skin-textmuted
         after:mt-4"
         >
           <li className="m-0">
@@ -71,7 +71,7 @@ const DecorativeLinks = () => {
               after:content-[''] 
               after:w-[1px]
               after:h-20 
-              after:bg-lightestSlate
+              after:bg-skin-textmuted
               after:block
               after:mt-4"
         >

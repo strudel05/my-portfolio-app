@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import DecorativeLinks from "./components/DecorativeLinks";
 import Logo from "./components/Logo";
 import Navbar from "./components/Navbar";
@@ -9,6 +9,39 @@ import Projects from "./pages/Projects";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [theme, setTheme] = useState(null);
+
+  useEffect(() => {
+    themeCheck();
+  }, [theme]);
+
+  const themeCheck = () => {
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+      document.documentElement.classList.remove("light");
+      setTheme("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.add("light");
+      setTheme("light");
+    }
+  };
+
+  const handleTheme = () => {
+    if (theme === "light") {
+      localStorage.setItem("theme", "dark");
+      setTheme("dark");
+      return;
+    } else if (theme === "dark") {
+      localStorage.setItem("theme", "light");
+      setTheme("light");
+      return;
+    }
+  };
 
   const handleClick = () => {
     setMenuOpen(!menuOpen);
@@ -20,7 +53,6 @@ function App() {
   };
 
   const closeSidebar = () => {
-    console.log("test");
     document.body.classList.remove("fixed-body");
     setMenuOpen(false);
   };
@@ -32,6 +64,8 @@ function App() {
         menuOpen={menuOpen}
         handleClick={handleClick}
         closeSidebar={closeSidebar}
+        handleTheme={handleTheme}
+        theme={theme}
       />
       <DecorativeLinks />
       <main

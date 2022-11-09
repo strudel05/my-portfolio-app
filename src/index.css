@@ -6,20 +6,39 @@
 
 @layer base {
   :root {
+    --color-text-inverted: #323634;
+    --color-text-base: #48726b;
+    --color-text-muted: #2e3b3c;
+    --color-text-white: #ebecec;
+
+    --color-fill-alwaysdark: #444846;
+    --color-fill-base: #d1e4da;
+    --color-fill-muted: #a4b6ab;
+    --color-fill-moremuted: #95a099;
+
+    --color-accent: #d55a49;
+
+    --color-accentalpha: #d55a4950;
+    --color-fill-alwaysdarkalpha: #4448467c;
+    --color-fill-basealpha: #d1e4dad9;
+  }
+
+  .dark {
     --color-text-inverted: #e6f1ff;
     --color-text-base: #ccd6f6;
     --color-text-muted: #8892b0;
+    --color-text-white: #c6c6c6;
 
-    --color-fill-alwaysdark: #020c1b;
-    --color-fill-base: #0a192f;
-    --color-fill-muted: #112240;
-    --color-fill-moremuted: #233554;
+    --color-fill-alwaysdark: #0d021b;
+    --color-fill-base: #1d1822;
+    --color-fill-muted: #332d39;
+    --color-fill-moremuted: #453b4e;
 
-    --color-accent: #64ffda;
+    --color-accent: #ffa564;
 
-    --color-accentalpha: #64ffda1a;
-    --color-fill-alwaysdarkalpha: #020c1bb3;
-    --color-fill-basealpha: #0a192fd9;
+    --color-accentalpha: #ffa5641a;
+    --color-fill-alwaysdarkalpha: #0d021b70;
+    --color-fill-basealpha: #1d1822d9;
   }
 
   * {
@@ -31,7 +50,7 @@
   }
 
   body {
-    @apply bg-skin-base text-skin-muted;
+    @apply bg-skin-base text-skin-muted transition-all duration-200 ease-in-out;
   }
 
   section {
@@ -76,7 +95,7 @@
   }
 
   .header {
-    background-color: var(--color-fill-basealpha);
+    background-color: var(--color-fill-base);
     backdrop-filter: blur(10px);
     position: fixed;
     width: 100%;
@@ -92,16 +111,13 @@
   .up {
     height: 70px;
     transform: translateY(0px);
+    background-color: var(--color-fill-basealpha);
     box-shadow: 0 10px 30px -10px var(--color-fill-alwaysdarkalpha);
   }
 
   .down {
     height: 70px;
     transform: translateY(-70px);
-  }
-
-  .fadeup-onload {
-    animation: 1s ease-out 0s 1 slideUp;
   }
 
   .grid-container {
@@ -115,39 +131,31 @@
 
     align-items: center;
     margin: 1rem 0 5rem 0;
+    border-radius: 4px;
   }
 
   .project__image {
+    box-shadow: 0 10px 20px 10px var(--color-fill-alwaysdarkalpha);
     grid-area: 1 / 1 / -1 / -1;
     height: 100%;
-    opacity: 0.15;
+    opacity: 0.2;
 
-    filter: sepia(50%) hue-rotate(100deg) saturate(250%) contrast(1)
-      brightness(50%);
-
-    box-shadow: 0 25px 30px -15px var(--color-fill-heavy);
-    transition: all 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 100ms cubic-bezier(0.645, 0.045, 0.355, 1);
 
     border-radius: 4px;
     overflow: hidden;
+    background-color: var(--color-fill-muted);
   }
 
-  .project__image--img:before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-accent);
-    mix-blend-mode: multiply;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
+  .project__image a {
+    mix-blend-mode: soft-light;
+    transition: all 100ms cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 
   .project__image--img {
     object-fit: cover;
     height: 100%;
-    filter: grayscale(80%);
+    filter: grayscale(90%);
   }
 
   .project__content {
@@ -166,6 +174,10 @@
       text-align: right;
     }
 
+    .project {
+      box-shadow: none;
+    }
+
     .project__content {
       grid-column: 1 / 10;
       display: flex;
@@ -179,20 +191,25 @@
 
     .project__image {
       grid-column: 5 / -1;
-      box-shadow: none;
-      filter: sepia(10%) hue-rotate(130deg) saturate(200%) contrast(1)
-        brightness(90%);
-      opacity: 0.4;
       height: auto;
+      opacity: 0.4;
+
+      box-shadow: 0 20px 40px 0px var(--color-fill-alwaysdarkalpha);
     }
 
     .project__image:hover {
+      opacity: 0.8;
+      background-color: transparent;
       filter: none;
-      opacity: 0.7;
     }
 
     .project__image a {
       border-radius: 4px;
+      mix-blend-mode: hard-light;
+    }
+
+    .project__image a:hover {
+      mix-blend-mode: normal;
     }
 
     .project__image--img {
@@ -203,7 +220,6 @@
     }
 
     .project__image--img:hover {
-      border-radius: 4px;
       filter: none;
     }
   }
