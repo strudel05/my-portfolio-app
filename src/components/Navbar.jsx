@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 
 const Navbar = ({
   menuOpen,
@@ -86,10 +87,15 @@ const Navbar = ({
           <a href="/resume.pdf" target="_blank" rel="noreferrer">
             <button className="ml-4">my resume</button>
           </a>
-          <button className="ml-4" onClick={handleTheme}>
-            {theme}
+          <button className="ml-4 p-[0.6875rem]" onClick={handleTheme}>
+            {theme === "dark" ? (
+              <MdOutlineLightMode size={22} />
+            ) : (
+              <MdOutlineDarkMode size={22} />
+            )}
           </button>
         </div>
+
         <div
           className={
             menuOpen
@@ -133,6 +139,13 @@ const Navbar = ({
           }
         >
           <nav className="flex flex-col justify-between items-center w-full">
+            <button className="mb-10 p-3" onClick={handleTheme}>
+              {theme === "dark" ? (
+                <MdOutlineLightMode size={22} />
+              ) : (
+                <MdOutlineDarkMode size={22} />
+              )}
+            </button>
             <ol className="font-mono text-zinc-300 text-sm marker:text-skin-accent [counter-reset:list-number] [font-size:clamp(1rem,4.25vw,1.5rem)] text-center">
               <li
                 className="text-skin-base 
