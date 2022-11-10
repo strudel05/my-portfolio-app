@@ -22,6 +22,8 @@ const ProjectCard = ({
             className="project__image--img"
             src={image}
             alt={`Preview of the ${name} site`}
+            width="600"
+            height="350"
           />
         </a>
       </div>
