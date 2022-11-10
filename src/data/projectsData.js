@@ -88,9 +88,8 @@ const data = [
     },
     image: myportfolio,
 
-    description:
-      "My own portfolio website. Made with React, Next.js and Tailwind CSS!",
-    technologies: ["React", "Next.js", "Tailwind CSS"],
+    description: "My own portfolio website. Made with React and Tailwind CSS!",
+    technologies: ["React", "Tailwind CSS"],
   },
 ];
 
