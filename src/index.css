@@ -145,6 +145,8 @@
     border-radius: 4px;
     overflow: hidden;
     background-color: var(--color-fill-muted);
+    max-height: 450px;
+    display: flex;
   }
 
   .project__image a {
@@ -216,6 +218,8 @@
     .project__image--img {
       transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
       border-radius: 4px;
+      min-width: 100%;
+      height: auto;
     }
 
     .project__image--img:hover {
