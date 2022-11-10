@@ -5,7 +5,7 @@ const Hero = () => {
       className="flex flex-col items-start min-h-screen justify-center p-0"
     >
       <div>
-        <h1 className="fadeup-onload text-skin-accent font-mono font-light [font-size:clamp(0.875rem,5vw,1rem)] mb-7">
+        <h1 className="fadeup-onload text-skin-accent font-mono font-light [font-size:clamp(0.875rem,5vw,1rem)] mb-4">
           Hi, my name is
         </h1>
         <h2 className="text-skin-base [font-size:clamp(2.5rem,8vw,5rem)]">

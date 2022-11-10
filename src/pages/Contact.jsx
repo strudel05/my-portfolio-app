@@ -1,6 +1,9 @@
 const Contact = () => {
   return (
-    <section id="contact" className="flex flex-col justify-center items-center">
+    <section
+      id="contact"
+      className="flex flex-col justify-center items-center mb-24"
+    >
       <h2 className="font-mono [font-size:clamp(1.25rem,4.5vw,1.75rem)] font-medium text-skin-accent whitespace-nowrap mb-5">
         03. What's Next?
       </h2>
