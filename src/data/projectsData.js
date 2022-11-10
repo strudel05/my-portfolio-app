@@ -2,7 +2,7 @@ import forkify from "../assets/projects/webp/forkify.webp";
 import jobster from "../assets/projects/webp/jobster.webp";
 import comfysloth from "../assets/projects/webp/comfysloth.webp";
 import githubusers from "../assets/projects/webp/githubusers.webp";
-import placeholder from "../assets/projects/webp/placeholder.webp";
+import myportfolio from "../assets/projects/webp/myportfolio.webp";
 import typescriptgenerics from "../assets/projects/webp/typescriptgenerics.webp";
 
 const data = [
@@ -31,7 +31,7 @@ const data = [
     technologies: [
       "React",
       "Redux",
-      "Styled-Components",
+      "Styled Components",
       "React Router",
       "Recharts",
     ],
@@ -52,7 +52,7 @@ const data = [
       "Stripe",
       "Node.js",
       "Serverless Functions",
-      "Styled-Components",
+      "Styled Components",
     ],
   },
   {
@@ -86,10 +86,11 @@ const data = [
       site: "https://react-githubusers-search-euyjang.netlify.app/",
       repo: "https://github.com/strudel05/react-github-users-search",
     },
-    image: placeholder,
+    image: myportfolio,
 
-    description: "My own portfolio website made with React and Tailwind CSS!",
-    technologies: ["React", "Tailwind CSS", "Responsive Design"],
+    description:
+      "My own portfolio website. Made with React, Next.js and Tailwind CSS!",
+    technologies: ["React", "Next.js", "Tailwind CSS"],
   },
 ];
 

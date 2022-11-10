@@ -24,11 +24,14 @@ const About = () => {
           <p className="mb-4">
             Here are a few technologies that I've been using in my projects:
           </p>
-          <ul className="grid grid-cols-2  whitespace-nowrap gap-x-4 mt-5 ml-1">
-            {skills.map((skill) => {
-              const { id, title, icon } = skill;
+          <ul className="grid grid-cols-2 whitespace-nowrap gap-x-4 mt-5 ml-1">
+            {skills.map((skill, i) => {
+              const { title, icon } = skill;
               return (
-                <li key={id} className="flex items-center text-sm my-1 mx-1">
+                <li
+                  key={i}
+                  className="flex items-center normal-case text-sm my-1 mx-1"
+                >
                   {icon}
                   {title}
                 </li>

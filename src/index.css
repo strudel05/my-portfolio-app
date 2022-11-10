@@ -174,7 +174,7 @@
     transition: mix-blend-mode 250ms ease-in-out;
   }
   .theme-light a {
-    mix-blend-mode: hard-light;
+    mix-blend-mode: screen;
     transition: mix-blend-mode 250ms ease-in-out;
   }
 
