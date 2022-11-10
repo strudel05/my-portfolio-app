@@ -83,7 +83,7 @@ const data = [
     id: 6,
     name: "Portfolio Project",
     url: {
-      site: "https://react-githubusers-search-euyjang.netlify.app/",
+      site: "https://euyjang.com",
       repo: "https://github.com/strudel05/react-github-users-search",
     },
     image: myportfolio,
