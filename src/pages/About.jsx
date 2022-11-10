@@ -1,5 +1,5 @@
 import SectionHeader from "../components/SectionHeader";
-import faceImg from "../assets/about-square.jpeg";
+import faceImg from "../assets/about.webp";
 import { skills } from "../data/skills";
 
 const About = () => {
@@ -78,7 +78,13 @@ const About = () => {
             "
             >
               <div className="rounded">
-                <img src={faceImg} alt="Headshot" className="rounded" />
+                <img
+                  src={faceImg}
+                  width="300"
+                  height="300"
+                  alt="Headshot"
+                  className="rounded"
+                />
               </div>
             </div>
           </div>

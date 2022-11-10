@@ -1,9 +1,9 @@
-import forkify from "../assets/forkify.png";
-import jobster from "../assets/jobster.png";
-import comfysloth from "../assets/comfysloth.png";
-import githubusers from "../assets/githubusers.png";
-import placeholder from "../assets/placeholder.png";
-import typescriptgenerics from "../assets/typescriptgenerics.png";
+import forkify from "../assets/projects/webp/forkify.webp";
+import jobster from "../assets/projects/webp/jobster.webp";
+import comfysloth from "../assets/projects/webp/comfysloth.webp";
+import githubusers from "../assets/projects/webp/githubusers.webp";
+import placeholder from "../assets/projects/webp/placeholder.webp";
+import typescriptgenerics from "../assets/projects/webp/typescriptgenerics.webp";
 
 const data = [
   {
