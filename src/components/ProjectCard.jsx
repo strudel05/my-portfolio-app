@@ -1,16 +1,22 @@
 import { FiExternalLink, FiGithub } from "react-icons/fi";
+import { useGlobalContext } from "../context";
 
 const ProjectCard = ({
-  id,
   name,
   url: { site, repo },
   image,
   description,
   technologies,
 }) => {
+  const { theme } = useGlobalContext();
+
   return (
     <li className="project">
-      <div className="project__image">
+      <div
+        className={
+          theme === "dark" ? "project__image" : "project__image theme-light"
+        }
+      >
         <a href={site} target="_blank" rel="noreferrer">
           <img
             className="project__image--img"
@@ -19,7 +25,7 @@ const ProjectCard = ({
           />
         </a>
       </div>
-      <div className="project__content p-8 sm:px-10 sm:py-0 transition-all ease-in-out">
+      <div className="project__content p-8 sm:px-10 sm:py-0">
         <p className="text-skin-accent text-sm mt-4 mb-4">Featured Project</p>
         <h3 className="font-sans text-skin-inverted font-semibold text-2xl capitalize mb-8">
           <a href={site} target="_blank" rel="noreferrer">
@@ -36,7 +42,7 @@ const ProjectCard = ({
                 key={i}
                 className="mx-0 px-1 py-[2px] opacity-[0.85] bg-skin-alwaysdark text-skin-white rounded"
               >
-                {tech}˜
+                {tech}
               </li>
             );
           })}

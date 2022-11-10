@@ -1,8 +1,11 @@
 import SectionHeader from "../components/SectionHeader";
 import faceImg from "../assets/about.webp";
 import { skills } from "../data/skills";
+import { useGlobalContext } from "../context";
 
 const About = () => {
+  const { theme } = useGlobalContext();
+
   return (
     <section id="about" className="min-h-[60vh]">
       <SectionHeader sectionId="1" sectionTitle="about me" />
@@ -33,45 +36,49 @@ const About = () => {
             })}
           </ul>
         </div>
-        <div className="col-span-2 max-w-[200px] md:max-w-[300px] mt-4 mb-16 md:mt-0 mx-auto w-[80%] sm:w-[60%] md:w-full order-1 md:order-2 ">
+        <div
+          className={`${
+            theme === "dark" ? "" : "theme-light-about"
+          } col-span-2 max-w-[200px] md:max-w-[300px] mt-4 mb-16 md:mt-0 mx-auto w-[80%] sm:w-[60%] md:w-full order-1 md:order-2`}
+        >
           <div
             className="
-          rounded w-full text-center relative bg-skin-accent
+            rounded w-full text-center relative bg-skin-accent
 
-          before:w-full
-          before:h-full
-          before:content-['']
-          before:absolute
-          before:bg-skin-base
-          before:mix-blend-screen
-          before:left-0
-          before:rounded
-          before:block
+            before:w-full
+            before:h-full
+            before:content-['']
+            before:absolute
+            before:bg-skin-base
+            before:mix-blend-screen
+            before:left-0
+            before:rounded
+            before:block
 
-          after:border-2
-          after:border-skin-accent
-          after:-z-10
-          after:absolute
-          after:block
-          after:content-['']
-          after:w-full
-          after:h-full
-          after:rounded
-          after:top-5
-          after:left-5
+            after:border-2
+            after:border-skin-accent
+            after:-z-10
+            after:absolute
+            after:block
+            after:content-['']
+            after:w-full
+            after:h-full
+            after:rounded
+            after:top-5
+            after:left-5
           
-          after:hover:-translate-x-1
-          after:hover:-translate-y-1
-          after:transition-all
-          after:duration-200
-          after:ease-in-out
-          "
+            after:hover:-translate-x-1
+            after:hover:-translate-y-1
+            after:transition-transform
+            after:duration-200
+            after:ease-in"
           >
             <div
               className="rounded mix-blend-multiply grayscale relative
 
               transition-all
-              ease-in-out
+              duration-200
+              ease-in
               hover:filter-none
               hover:mix-blend-normal
               

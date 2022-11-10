@@ -21,9 +21,9 @@ const SectionHeader = ({ sectionId, sectionTitle }) => {
           after:ml-6
           after:sm:w-[200px]
           after:md:w-[250px]
-          after:transition-all
-          after:duration-500
-          after:ease-in-out
+          after:transition-[width]
+          after:duration-[250ms]
+          after:ease-linear
         
         "
     >

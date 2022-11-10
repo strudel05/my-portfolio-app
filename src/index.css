@@ -50,7 +50,7 @@
   }
 
   body {
-    @apply bg-skin-base text-skin-muted;
+    @apply transition-colors bg-skin-base text-skin-muted;
   }
 
   section {
@@ -58,7 +58,7 @@
   }
 
   a {
-    @apply hover:text-skin-accent transition-all ease-linear;
+    @apply hover:text-skin-accent transition-colors ease-linear;
   }
 
   h1,
@@ -75,7 +75,7 @@
   }
 
   button {
-    @apply box-border font-mono capitalize text-sm border border-skin-accent px-4 py-3 rounded text-skin-accent transition-all ease-linear hover:bg-skin-accentalpha cursor-pointer;
+    @apply box-border font-mono capitalize text-sm border border-skin-accent px-4 py-3 rounded text-skin-accent transition-colors ease-linear hover:bg-skin-accentalpha cursor-pointer;
   }
 }
 
@@ -94,6 +94,12 @@
 
   .fixed-body header {
     background-color: transparent;
+  }
+
+  .decorative__links {
+    transition-property: color, transform;
+    transition-duration: 100ms;
+    transition-timing-function: ease-in-out;
   }
 
   .header {
@@ -124,6 +130,10 @@
     transform: translateY(-70px);
   }
 
+  .theme-light-about > div:before {
+    mix-blend-mode: hard-light;
+  }
+
   .grid-container {
     margin-bottom: 5rem;
   }
@@ -144,18 +154,28 @@
     height: 100%;
     opacity: 0.3;
 
-    transition: all 100ms cubic-bezier(0.645, 0.045, 0.355, 1);
-
     border-radius: 4px;
     overflow: hidden;
     background-color: var(--color-fill-muted);
     max-height: 550px;
     display: flex;
+
+    transition-property: height, opacity, box-shadow, background-color, filter;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+  }
+
+  .theme-light {
+    background-color: var(--color-fill-alwaysdark);
   }
 
   .project__image a {
     mix-blend-mode: soft-light;
-    transition: all 100ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: mix-blend-mode 250ms ease-in-out;
+  }
+  .theme-light a {
+    mix-blend-mode: hard-light;
+    transition: mix-blend-mode 250ms ease-in-out;
   }
 
   .project__image--img {
@@ -171,6 +191,8 @@
     grid-area: 1 / 1 / -1 / -1;
     border-radius: 4px;
     background-color: transparent;
+    backdrop-filter: blur(3px);
+    transition: backdrop-filter 250ms ease;
   }
 
   @media (min-width: 640px) {
@@ -191,6 +213,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      backdrop-filter: blur(0px);
     }
 
     .project:nth-child(odd) .project__image {
@@ -215,12 +238,16 @@
       mix-blend-mode: hard-light;
     }
 
+    .theme-light a {
+      mix-blend-mode: lighten;
+    }
+
     .project__image a:hover {
-      mix-blend-mode: normal;
+      mix-blend-mode: unset;
     }
 
     .project__image--img {
-      transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: filter 250ms ease-in-out;
       border-radius: 4px;
       min-width: 100%;
       height: auto;

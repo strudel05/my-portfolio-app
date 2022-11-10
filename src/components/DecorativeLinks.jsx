@@ -19,11 +19,9 @@ const DecorativeLinks = () => {
               rel="noreferrer"
               aria-label="GitHub"
               className="
-            hover:text-skin-accent
-            hover:-translate-y-1
-            transition-all
-            block
-            p-4
+              decorative__links block p-4
+              hover:text-skin-accent
+              hover:-translate-y-1
             "
             >
               <FiGithub size={22} />
@@ -36,11 +34,9 @@ const DecorativeLinks = () => {
               rel="noreferrer"
               aria-label="Instagram"
               className="
-             hover:text-skin-accent
-            hover:-translate-y-1
-            transition-all
-            block
-            p-4
+              decorative__links block p-4
+              hover:text-skin-accent
+              hover:-translate-y-1
             "
             >
               <FiInstagram size={22} />
@@ -53,11 +49,9 @@ const DecorativeLinks = () => {
               rel="noreferrer"
               aria-label="LinkedIn"
               className="
-             hover:text-skin-accent
-            hover:-translate-y-1
-            transition-all
-            block
-            p-4
+              decorative__links block p-4
+              hover:text-skin-accent
+              hover:-translate-y-1
             "
             >
               <FiLinkedin size={22} />
@@ -77,10 +71,11 @@ const DecorativeLinks = () => {
         >
           <a
             className="
+            decorative__links
             font-mono text-xs leading-none tracking-widest p-2 transition-all
             [writing-mode:vertical-rl] 
 
-            hover:-translate-y-1
+            hover:-translate-y-2
             hover:text-skin-accent
               "
             href="mailto:euyjang05@gmail.com"
