@@ -1,15 +1,12 @@
 import { useState, useEffect } from "react";
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
+import { useGlobalContext } from "../context";
 
-const Navbar = ({
-  menuOpen,
-  handleClick,
-  closeSidebar,
-  theme,
-  handleTheme,
-}) => {
+const Navbar = () => {
   const [scrollAtTop, setScrollAtTop] = useState(true);
   const [scrollDirection, setScrollDirection] = useState("");
+  const { menuOpen, handleClick, closeSidebar, theme, handleTheme } =
+    useGlobalContext();
 
   let lastScroll = 0;
   const handleNav = () => {
