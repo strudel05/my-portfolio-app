@@ -16,7 +16,13 @@ const DecorativeLinks = () => {
         after:mt-4"
         >
           {socials.map((social, i) => {
-            return <SocialLink key={i} {...social} />;
+            return (
+              <SocialLink
+                key={i}
+                {...social}
+                customStyle="decorative__links block p-4 hover:text-skin-accent hover:-translate-y-1"
+              />
+            );
           })}
         </ul>
       </div>
@@ -31,6 +37,8 @@ const DecorativeLinks = () => {
               after:mt-4"
         >
           <a
+            target="_blank"
+            rel="noreferrer"
             className="
             decorative__links
             font-mono text-xs leading-none tracking-widest p-2 transition-all

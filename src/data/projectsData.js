@@ -71,7 +71,7 @@ const data = [
     name: "Portfolio Project",
     url: {
       site: "https://euyjang.com",
-      repo: "https://github.com/strudel05/react-github-users-search",
+      repo: "https://github.com/strudel05/my-portfolio-app",
       image: "/project-pictures/webp/myportfolio.webp",
     },
 

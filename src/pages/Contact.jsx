@@ -2,7 +2,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="flex flex-col justify-center items-center mb-24"
+      className="flex flex-col justify-center items-center mb-20"
     >
       <h2 className="font-mono [font-size:clamp(1.25rem,4.5vw,1.75rem)] font-medium text-skin-accent whitespace-nowrap mb-5">
         03. What's Next?
@@ -10,7 +10,7 @@ const Contact = () => {
       <h3 className="[font-size:clamp(2.5rem,7vw,4rem)] text-skin-base mb-8 xl:mb-10">
         Get In Touch
       </h3>
-      <p className="max-w-[600px] mb-8 xl:mb-10 text-center">
+      <p className="max-w-[600px] mb-8 xl:mb-10 text-center leading-relaxed">
         I'm currently looking for new opportunities to build upon my skills as a
         frontend developer. If you think I could be a good fit for your team,
         don't hesitate to reach out 😃

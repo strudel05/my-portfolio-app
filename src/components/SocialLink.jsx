@@ -1,4 +1,4 @@
-const SocialLink = ({ url, label, icon }) => {
+const SocialLink = ({ url, label, icon, customStyle }) => {
   return (
     <li className="m-0">
       <a
@@ -6,11 +6,7 @@ const SocialLink = ({ url, label, icon }) => {
         target="_blank"
         rel="noreferrer"
         aria-label={label}
-        className="
-              decorative__links block p-4
-              hover:text-skin-accent
-              hover:-translate-y-1
-            "
+        className={customStyle}
       >
         {icon}
       </a>

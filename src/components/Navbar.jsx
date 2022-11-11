@@ -42,8 +42,9 @@ const Navbar = () => {
   return (
     <header className={scrollAtTop ? "header" : `header ${scrollDirection}`}>
       <nav className="flex items-center justify-between w-full">
-        {/* <h1 className="font-mono text-3xl font-bold text-skin-accent">LOGO.</h1> */}
-        <Logo />
+        <a href="#hero" aria-label="home">
+          <Logo />
+        </a>
         <div className="hidden md:flex items-center">
           <ol className="flex font-mono text-zinc-300 text-sm marker:text-skin-accent [counter-reset:list-number]">
             {links.map((link, i) => {

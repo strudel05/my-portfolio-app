@@ -10,7 +10,7 @@ const socials = [
   {
     label: "Github",
     url: "https://github.com/strudel05",
-    icon: <AiFillLinkedin size={22} />,
+    icon: <AiFillLinkedin size={23} />,
   },
 ];
 
