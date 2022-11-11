@@ -86,6 +86,18 @@
 }
 
 @layer components {
+  .logo-dark {
+    filter: invert(62%) sepia(33%) saturate(670%) hue-rotate(340deg)
+      brightness(107%) contrast(101%);
+    height: 45px;
+  }
+
+  .logo-light {
+    filter: invert(47%) sepia(40%) saturate(963%) hue-rotate(319deg)
+      brightness(88%) contrast(89%);
+    height: 45px;
+  }
+
   .fixed-body {
     overflow: hidden;
     pointer-events: none;

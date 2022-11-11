@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 import { useGlobalContext } from "../context";
+import Logo from "./Logo";
 import NavbarListDesktop from "./NavbarListDesktop";
 import NavbarListMobile from "./NavbarListMobile";
 
@@ -41,7 +42,8 @@ const Navbar = () => {
   return (
     <header className={scrollAtTop ? "header" : `header ${scrollDirection}`}>
       <nav className="flex items-center justify-between w-full">
-        <h1 className="font-mono text-3xl font-bold text-skin-accent">LOGO.</h1>
+        {/* <h1 className="font-mono text-3xl font-bold text-skin-accent">LOGO.</h1> */}
+        <Logo />
         <div className="hidden md:flex items-center">
           <ol className="flex font-mono text-zinc-300 text-sm marker:text-skin-accent [counter-reset:list-number]">
             {links.map((link, i) => {
