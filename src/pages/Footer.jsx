@@ -14,7 +14,7 @@ const Footer = () => {
             href="mailto:euyjang05@gmail.com"
             target="_blank"
             rel="noreferrer"
-            aria-label="open email"
+            aria-label="email euy jang"
             className="m-2 block"
           >
             <AiOutlineMail size={23} />

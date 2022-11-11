@@ -18,9 +18,10 @@ const ProjectCard = ({
       >
         <a href={site} target="_blank" rel="noreferrer">
           <img
+            aria-hidden="true"
+            alt={`Preview of the ${site} site`}
             className="project__image--img"
             src={image}
-            alt={`Preview of the ${name} site`}
             width="600"
             height="350"
           />
@@ -49,7 +50,13 @@ const ProjectCard = ({
           })}
         </ul>
         <div className="flex gap-2 items-center">
-          <a target="_blank" rel="noreferrer" className="p-2" href={repo}>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            className="p-2"
+            href={repo}
+            aria-label="link to repository"
+          >
             <FiGithub size={20} />
           </a>
           <a
@@ -57,6 +64,7 @@ const ProjectCard = ({
             rel="noreferrer"
             className="p-2 relative"
             href={site}
+            aria-label="link to published site"
           >
             <FiExternalLink className="relative bottom-[1.5px]" size={22} />
           </a>

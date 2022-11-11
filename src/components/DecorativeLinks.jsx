@@ -1,5 +1,3 @@
-import { FiGithub } from "react-icons/fi";
-import { AiFillLinkedin } from "react-icons/ai";
 import SocialLink from "./SocialLink";
 import socials from "../data/socials";
 
@@ -48,6 +46,7 @@ const DecorativeLinks = () => {
             hover:text-skin-accent
               "
             href="mailto:euyjang05@gmail.com"
+            aria-label="email euy jang"
           >
             euyjang05@gmail.com
           </a>

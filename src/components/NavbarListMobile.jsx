@@ -11,6 +11,7 @@ const NavbarListMobile = ({ item, closeSidebar }) => {
                   before:text-skin-accent
                   before:content-['0'counter(list-number)'.']"
         onClick={closeSidebar}
+        aria-label={item}
       >
         {item}
       </a>

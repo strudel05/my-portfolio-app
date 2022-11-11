@@ -15,7 +15,7 @@ const Contact = () => {
         frontend developer. If you think I could be a good fit for your team,
         don't hesitate to reach out 😃
       </p>
-      <a href="mailto:euyjang05@gmail.com">
+      <a href="mailto:euyjang05@gmail.com" aria-label="email euy jang">
         <button className="text-xl px-8 py-6">hello to you too!</button>
       </a>
     </section>

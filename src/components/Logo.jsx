@@ -9,6 +9,8 @@ const Logo = () => {
       src={logo}
       alt="EJ Logo"
       className={theme === "dark" ? "logo-dark" : "logo-light"}
+      width="45"
+      height="45"
     />
   );
 };

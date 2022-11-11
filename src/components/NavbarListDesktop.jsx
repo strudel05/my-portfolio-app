@@ -4,6 +4,7 @@ const NavbarListDesktop = ({ item }) => {
       <a
         href={`#${item}`}
         className="before:mr-3 before:text-skin-accent before:content-['0'counter(list-number)'.']"
+        aria-label={item}
       >
         {item}
       </a>

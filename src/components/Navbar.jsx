@@ -37,6 +37,7 @@ const Navbar = () => {
   useEffect(() => {
     window.addEventListener("scroll", handleNav);
     return () => window.removeEventListener("scroll", handleNav);
+    // eslint-disable-next-line
   }, []);
 
   return (
@@ -51,10 +52,20 @@ const Navbar = () => {
               return <NavbarListDesktop key={i} item={link} />;
             })}
           </ol>
-          <a href="/resume.pdf" target="_blank" rel="noreferrer">
-            <button className="ml-4">my resume</button>
+          <a
+            href="/resume.pdf"
+            aria-label="resume"
+            target="_blank"
+            rel="noreferrer"
+            className="ml-4 font-mono text-sm border border-skin-accent px-4 py-3 rounded text-skin-accent hover:bg-skin-accentalpha"
+          >
+            My Resume
           </a>
-          <button className="ml-4 p-[0.6875rem]" onClick={handleTheme}>
+          <button
+            className="ml-4 p-[0.6875rem]"
+            aria-label={`toggle ${theme} mode`}
+            onClick={handleTheme}
+          >
             {theme === "dark" ? (
               <MdOutlineLightMode size={22} />
             ) : (
@@ -102,7 +113,11 @@ const Navbar = () => {
           }md:hidden z-10 flex justify-center items-center fixed top-0 bottom-0 right-0 bg-skin-muted [width:min(75vw,400px)] transition-transform duration-150 ease-linear min-h-screen`}
         >
           <nav className="flex flex-col justify-between items-center w-full">
-            <button className="mb-10 p-3" onClick={handleTheme}>
+            <button
+              aria-label={`toggle ${theme} mode`}
+              className="mb-10 p-3"
+              onClick={handleTheme}
+            >
               {theme === "dark" ? (
                 <MdOutlineLightMode size={22} />
               ) : (
@@ -120,10 +135,13 @@ const Navbar = () => {
                 );
               })}
             </ol>
-            <a href="/resume.pdf" target="_blank" rel="noreferrer">
-              <button className="mt-5 px-10 py-5 [font-size:clamp(1rem,4vw,1.25rem)]">
-                my resume
-              </button>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-5 px-7 py-6 [font-size:clamp(1rem,4vw,1.25rem)] box-border font-mono capitalize text-sm border border-skin-accent rounded text-skin-accent hover:bg-skin-accentalpha"
+            >
+              My Resume
             </a>
           </nav>
         </aside>
