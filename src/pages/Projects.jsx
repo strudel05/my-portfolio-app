@@ -4,16 +4,14 @@ import data from "../data/projectsData";
 
 const Projects = () => {
   return (
-    <>
-      <section id="projects">
-        <SectionHeader sectionId="2" sectionTitle="projects" id="projects" />
-        <ul>
-          {data.map((item) => {
-            return <ProjectCard key={item.id} {...item} />;
-          })}
-        </ul>
-      </section>
-    </>
+    <section id="projects">
+      <SectionHeader sectionId="2" sectionTitle="projects" id="projects" />
+      <ul>
+        {data.map((item, i) => {
+          return <ProjectCard key={i} {...item} />;
+        })}
+      </ul>
+    </section>
   );
 };
 export default Projects;

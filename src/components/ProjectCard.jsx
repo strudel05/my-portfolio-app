@@ -3,8 +3,7 @@ import { useGlobalContext } from "../context";
 
 const ProjectCard = ({
   name,
-  url: { site, repo },
-  image,
+  url: { site, repo, image },
   description,
   technologies,
 }) => {
