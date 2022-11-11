@@ -57,6 +57,9 @@ const About = () => {
             before:left-0
             before:rounded
             before:block
+            before:transition-[mix-blend-mode]
+            before:duration-200
+            before:ease-in
 
             after:border-2
             after:border-skin-accent

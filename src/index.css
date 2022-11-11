@@ -7,20 +7,20 @@
 @layer base {
   :root {
     --color-text-inverted: #323634;
-    --color-text-base: #253131;
-    --color-text-muted: #324c47;
+    --color-text-base: #1e2828;
+    --color-text-muted: #304141;
     --color-text-white: #ebecec;
 
-    --color-fill-alwaysdark: #444846;
-    --color-fill-base: #bfd0c7;
-    --color-fill-muted: #a4b6ab;
+    --color-fill-alwaysdark: #2a2d2b;
+    --color-fill-base: #ecfdfa;
+    --color-fill-muted: #c7d6c8;
     --color-fill-moremuted: #95a099;
 
-    --color-accent: #d55a49;
+    --color-accent: #a80049;
 
-    --color-accentalpha: #d559493d;
+    --color-accentalpha: #a800493d;
     --color-fill-alwaysdarkalpha: #4448467c;
-    --color-fill-basealpha: #d1e4dad9;
+    --color-fill-basealpha: #ecfdfad9;
   }
 
   .dark {
@@ -143,7 +143,8 @@
   }
 
   .theme-light-about > div:before {
-    mix-blend-mode: hard-light;
+    background-color: var(--color-fill-moremuted);
+    mix-blend-mode: screen;
   }
 
   .grid-container {
@@ -240,7 +241,7 @@
     }
 
     .project__image:hover {
-      opacity: 0.8;
+      opacity: 0.9;
       background-color: transparent;
       filter: none;
     }
@@ -248,14 +249,6 @@
     .project__image a {
       border-radius: 4px;
       mix-blend-mode: hard-light;
-    }
-
-    .theme-light a {
-      mix-blend-mode: lighten;
-    }
-
-    .project__image a:hover {
-      mix-blend-mode: unset;
     }
 
     .project__image--img {
