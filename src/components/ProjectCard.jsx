@@ -20,6 +20,7 @@ const ProjectCard = ({
           <img
             aria-hidden="true"
             alt={`Preview of the ${site} site`}
+            aria-label={`link to ${site}`}
             className="project__image--img"
             src={image}
             width="600"
