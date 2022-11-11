@@ -1,5 +1,4 @@
 import SectionHeader from "../components/SectionHeader";
-import faceImg from "../assets/about.webp";
 import { skills } from "../data/skills";
 import { useGlobalContext } from "../context";
 
