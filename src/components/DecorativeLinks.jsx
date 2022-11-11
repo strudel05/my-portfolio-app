@@ -1,4 +1,7 @@
-import { FiGithub, FiInstagram, FiLinkedin } from "react-icons/fi";
+import { FiGithub } from "react-icons/fi";
+import { AiFillLinkedin } from "react-icons/ai";
+import SocialLink from "./SocialLink";
+import socials from "../data/socials";
 
 const DecorativeLinks = () => {
   return (
@@ -12,51 +15,9 @@ const DecorativeLinks = () => {
         after:h-20 after:bg-skin-textmuted
         after:mt-4"
         >
-          <li className="m-0">
-            <a
-              href="https://github.com/strudel05"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="GitHub"
-              className="
-              decorative__links block p-4
-              hover:text-skin-accent
-              hover:-translate-y-1
-            "
-            >
-              <FiGithub size={22} />
-            </a>
-          </li>
-          <li className="m-0">
-            <a
-              href="https://www.instagram.com/euyyyy_0/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Instagram"
-              className="
-              decorative__links block p-4
-              hover:text-skin-accent
-              hover:-translate-y-1
-            "
-            >
-              <FiInstagram size={22} />
-            </a>
-          </li>
-          <li className="m-0">
-            <a
-              href="https://www.linkedin.com/in/euyyoungjang/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
-              className="
-              decorative__links block p-4
-              hover:text-skin-accent
-              hover:-translate-y-1
-            "
-            >
-              <FiLinkedin size={22} />
-            </a>
-          </li>
+          {socials.map((social, i) => {
+            return <SocialLink key={i} {...social} />;
+          })}
         </ul>
       </div>
       <div className="hidden md:block w-10 bottom-0 fixed right-5">

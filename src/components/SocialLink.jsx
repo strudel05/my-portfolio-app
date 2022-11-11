@@ -1,18 +1,18 @@
-const SocialLink = () => {
+const SocialLink = ({ url, label, icon }) => {
   return (
     <li className="m-0">
       <a
-        href="https://github.com/strudel05"
+        href={url}
         target="_blank"
         rel="noreferrer"
-        aria-label="GitHub"
+        aria-label={label}
         className="
               decorative__links block p-4
               hover:text-skin-accent
               hover:-translate-y-1
             "
       >
-        <FiGithub size={22} />
+        {icon}
       </a>
     </li>
   );
