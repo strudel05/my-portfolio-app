@@ -91,13 +91,20 @@ const About = () => {
             "
             >
               <div className="rounded">
-                <img
-                  src={faceImg}
-                  width="300"
-                  height="300"
-                  alt="Headshot"
-                  className="rounded"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcSet="/assets/profile/about-500.webp"
+                  />
+                  <source srcSet="/assets/profile/about-350.webp" />
+                  <img
+                    src="/assets/profile/about-500.webp"
+                    width="300"
+                    height="300"
+                    alt="Headshot"
+                    className="rounded"
+                  />
+                </picture>
               </div>
             </div>
           </div>

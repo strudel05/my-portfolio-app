@@ -77,6 +77,11 @@
   button {
     @apply box-border font-mono capitalize text-sm border border-skin-accent px-4 py-3 rounded text-skin-accent transition-colors ease-linear hover:bg-skin-accentalpha cursor-pointer;
   }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 @layer utilities {
@@ -93,8 +98,8 @@
   }
 
   .logo-light {
-    filter: invert(47%) sepia(40%) saturate(963%) hue-rotate(319deg)
-      brightness(88%) contrast(89%);
+    filter: invert(9%) sepia(94%) saturate(4736%) hue-rotate(325deg)
+      brightness(102%) contrast(105%);
     height: 45px;
   }
 
@@ -170,7 +175,6 @@
     border-radius: 4px;
     overflow: hidden;
     background-color: var(--color-fill-muted);
-    max-height: 550px;
     display: flex;
 
     transition-property: height, opacity, box-shadow, background-color, filter;

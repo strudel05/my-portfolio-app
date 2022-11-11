@@ -3,9 +3,10 @@ import { useGlobalContext } from "../context";
 
 const ProjectCard = ({
   name,
-  url: { site, repo, image },
+  url: { site, repo },
   description,
   technologies,
+  sourceSet: { lg, md, sm },
 }) => {
   const { theme } = useGlobalContext();
 
@@ -17,15 +18,20 @@ const ProjectCard = ({
         }
       >
         <a href={site} target="_blank" rel="noreferrer">
-          <img
-            aria-hidden="true"
-            alt={`Preview of the ${site} site`}
-            aria-label={`link to ${site}`}
-            className="project__image--img"
-            src={image}
-            width="600"
-            height="350"
-          />
+          <picture>
+            <source media="(min-width: 1024px)" srcSet={lg} />
+            <source media="(min-width: 640px)" srcSet={md} />
+            <source srcSet={sm} />
+            <img
+              aria-hidden="true"
+              alt={`Preview of the ${name} site`}
+              aria-label={`link to ${name}`}
+              className="project__image--img"
+              src={lg}
+              width="600"
+              height="326"
+            />
+          </picture>
         </a>
       </div>
       <div className="project__content p-8 sm:px-10 sm:py-0">
