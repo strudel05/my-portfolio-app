@@ -12,16 +12,17 @@ const About = () => {
         <div className="col-span-3 leading-relaxed order-2 md:order-1">
           <p className="mb-4 relative">
             Hello! My name is Euy, and I've been creating things that live on
-            the internet. I originally started out in a game QA career, and I
+            the internet. I originally started out in a game QA career, and
             realized quickly that I prefer the interactivity and creative energy
             of web development.
           </p>
           <p className="mb-4">
-            For the past year or so, I've been practicing coding for at least
-            five hours a day consistently.
+            I've been coding every day consistently for the past year or so,
+            learning modern technologies and diving deeper into the fundamentals
+            of the web.
           </p>
           <p className="mb-4">
-            Here are a few technologies that I've been using in my projects:
+            And here are a few technologies that I've been using in my projects:
           </p>
           <ul className="grid grid-cols-2 whitespace-nowrap gap-x-4 mt-5 ml-1">
             {skills.map((skill, i) => {

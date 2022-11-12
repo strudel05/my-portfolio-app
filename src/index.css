@@ -183,7 +183,8 @@
   }
 
   .theme-light {
-    background-color: var(--color-fill-alwaysdark);
+    background-color: var(--color-accent);
+    filter: brightness(90%) sepia(30%) hue-rotate(120deg);
   }
 
   .project__image a {
@@ -191,7 +192,7 @@
     transition: mix-blend-mode 250ms ease-in-out;
   }
   .theme-light a {
-    mix-blend-mode: screen;
+    mix-blend-mode: hard-light;
     transition: mix-blend-mode 250ms ease-in-out;
   }
 
@@ -243,6 +244,9 @@
       opacity: 0.4;
       box-shadow: 0 20px 40px 0px var(--color-fill-alwaysdarkalpha);
     }
+    .theme-light {
+      filter: brightness(80%) sepia(30%) hue-rotate(90deg) contrast(1.1);
+    }
 
     .project__image:hover {
       opacity: 0.9;
@@ -253,6 +257,9 @@
     .project__image a {
       border-radius: 4px;
       mix-blend-mode: hard-light;
+    }
+    .theme-light a {
+      mix-blend-mode: screen;
     }
 
     .project__image--img {
