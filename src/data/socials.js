@@ -8,8 +8,8 @@ const socials = [
     icon: <FiGithub size={22} />,
   },
   {
-    label: "Github",
-    url: "https://github.com/strudel05",
+    label: "Linkedin",
+    url: "https://www.linkedin.com/in/euyyoungjang/",
     icon: <AiFillLinkedin size={23} />,
   },
 ];
