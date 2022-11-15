@@ -224,6 +224,7 @@
       box-shadow: none;
       height: auto;
       grid-template-rows: min-content;
+      position: relative;
     }
 
     .project__content {
@@ -232,6 +233,9 @@
       flex-direction: column;
       align-items: flex-start;
       backdrop-filter: blur(0px);
+    }
+
+    .project__content--paragraph {
     }
 
     .project:nth-child(odd) .project__image {
